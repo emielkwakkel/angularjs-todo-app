@@ -1,0 +1,16 @@
+body {
+    margin-top: 70px;
+}
+
+input {
+    padding: 10px;
+}
+
+
+/*form input.ng-invalid.ng-touched {*/
+    /*background-color: #FA787E;*/
+/*}*/
+
+/*form input.ng-valid.ng-touched {*/
+    /*background-color: #78FA89;*/
+/*}*/

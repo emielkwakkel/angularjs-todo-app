@@ -1,0 +1,17 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Angular Playgroundsession Todo App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emiel Kwakkel",
+  "license": "Sogeti",
+  "devDependencies": {
+    "angular": "^1.5.8"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

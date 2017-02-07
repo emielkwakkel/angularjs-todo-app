@@ -1,0 +1,57 @@
+<html ng-app="todoApp">
+<head>
+    <title>Track my todo's</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body ng-controller="todoController as todo">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Todo App</a>
+    </div>
+</nav>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="todo in todo.todos track by $index">
+            <span class="tag tag-default tag-pill pull-xs-right">delete</span>
+            {{todo}}
+        </li>
+    </ul>
+</div>
+
+<!-- Add todo -->
+<div class="container">
+    <form
+            ng-submit="form.$valid && todo.addTodo()"
+            name="form"
+            novalidate>
+        <div class="form-group">
+            <div
+                    class="input-group"
+            ng-class="{'has-warning  has-feedback': !form.$valid && form.$dirty}">
+                <input type="text"
+                       ng-model="todo.desc"
+                       class="form-control"
+                       placeholder="Add Todo..."
+                       required
+                       minlength="3">
+                        <span class="input-group-btn">
+                            <input
+                                    class="btn btn-secondary"
+                                    type="submit"
+                                    ng-submit="form.$valid && todo.addTodo()"
+                                    value="Add!">
+                        </span>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="./node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./app.module.js"></script>
+<script type="text/javascript" src="./app.controller.js"></script>
+</body>
+
+</html>
